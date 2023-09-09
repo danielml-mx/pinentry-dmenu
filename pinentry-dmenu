@@ -4,9 +4,9 @@ echo 'OK this mf ready'
 
 while read stdin; do
 	case $stdin in
-		*GETPIN*) echo "D `dmenu -P -po "gpg-agent: $KEYNAME ($KEYID)"`"; echo "OK" ;;
+		*GETPIN*) echo "D `dmenu -P -po "$KEYNAME ($KEYID)"`"; echo "OK" ;;
 		*SETDESC*) KEYNAME=${stdin#*:%0A%22}; KEYNAME=${KEYNAME%\%22\%0A*}; KEYID=${stdin#*ID }; KEYID=${KEYID%,*}; echo OK ;;
-		*SETERROR*) notify-send $stdin ;;
+		*SETERROR*) notify-send "${stdin#SETERROR }"; echo "OK" ;;
 		*BYE*) exit 0 ;;
 		*) echo OK ;;
 	esac
