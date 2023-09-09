@@ -1,6 +1,6 @@
 # pinentry-dmenu
 
-This is a simple shell script that integrates dmenu-wayland with [GnuPG](https://gnupg.org/) as an alternative pinentry method.
+This is a simple shell script that integrates [dmenu-wayland](https://github.com/fabianscode/dmenu-wayland) with [GnuPG](https://gnupg.org/) as an alternative pinentry method.
 
 ## Installation
 
@@ -10,12 +10,10 @@ To install this, do a `git clone https://github.com/fabianscode/pinentry-dmenu`,
 
 ## Usage
 
-Firstly, you will need a dmenu build with the [password](https://tools.suckless.org/dmenu/patches/password/) patch applied, otherwise dmenu will not show up when used as the pinentry program.
-
-Then, to use dmenu as the pinentry program for GnuPG, configure `~/.gnupg/gpg-agent.conf` to use the full path of the `pinentry-dmenu` script:
+To use dmenu as the pinentry program for GnuPG, configure `~/.gnupg/gpg-agent.conf` to use the full path of the `pinentry-dmenu` script:
 
 ```
-pinentry-program /usr/bin/pinentry-dmenu
+pinentry-program /usr/local/bin/pinentry-dmenu (or whatever other path you chose)
 ```
 
-The full path will depend on the `PREFIX` used in `config.mk`. The above example would apply to users who installed the AUR package, but by installing it with `make` with the default `PREFIX` installs it to `/usr/local/bin/pinentry-dmenu`.
+The full path will depend on the `PREFIX` used in `config.mk`. 
