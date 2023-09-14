@@ -4,7 +4,7 @@ echo 'OK this mf ready'
 
 while read stdin; do
 	case $stdin in
-		*GETPIN*) echo "D `dmenu -P -po "$KEYNAME ($KEYID)"`"; echo "OK" ;;
+		*GETPIN*) echo "D `dmenu -P -po "$KEYNAME ($KEYID)" -h 26 -fn 'Terminess Nerd Font'`"; echo "OK" ;;
 		*SETDESC*) KEYNAME=${stdin#*:%0A%22}; KEYNAME=${KEYNAME%\%22\%0A*}; KEYID=${stdin#*ID }; KEYID=${KEYID%,*}; echo OK ;;
 		*SETERROR*) notify-send "${stdin#SETERROR }"; echo "OK" ;;
 		*BYE*) exit 0 ;;
