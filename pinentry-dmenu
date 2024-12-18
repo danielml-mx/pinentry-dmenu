@@ -1,10 +1,11 @@
 #!/bin/sh
 
-echo 'OK this mf ready'
+echo 'OK Pleased to meet you'
 
 while read stdin; do
 	case $stdin in
-		*GETPIN*) echo "D `dmenu -P -po "$KEYNAME ($KEYID)" -h 26 -fn 'Terminess Nerd Font'`"; echo "OK" ;;
+		*GETPIN*) echo "D `dmenu -P -p "$KEYNAME ($KEYID)"`"; echo "OK" ;;		# Passphrase info, top of screen (default)
+		#*GETPIN*) echo "D `dmenu -c -P -p "Passphrase:" `"; echo "OK" ;;		# No passphrase info, centered (requires centered patch)
 		*SETDESC*) KEYNAME=${stdin#*:%0A%22}; KEYNAME=${KEYNAME%\%22\%0A*}; KEYID=${stdin#*ID }; KEYID=${KEYID%,*}; echo OK ;;
 		*SETERROR*) notify-send "${stdin#SETERROR }"; echo "OK" ;;
 		*BYE*) exit 0 ;;
