@@ -4,6 +4,8 @@ This is a simple shell script that integrates [dmenu](https://tools.suckless.org
 
 This was forked from [fabianscode/pinentry-dmenu](https://github.com/fabianscode/pinentry-dmenu) since some changes made to it made it incompatible with a default installation of dmenu (non-Wayland) with the password patch. 
 
+It is worth noting that this script is unrelated to the one found in the Arch User Repository of the same name, since that one builds its own binary of dmenu with the password patch. This one expects a binary to already be installed. By the way, if someone wishes to make an AUR package of this project, please go ahead.
+
 ## Installation
 
 ### Manual
