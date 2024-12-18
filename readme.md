@@ -1,6 +1,6 @@
 # pinentry-dmenu
 
-This is a simple shell script that integrates [dmenu-wayland](https://github.com/fabianscode/dmenu-wayland) with [GnuPG](https://gnupg.org/) as an alternative pinentry method.
+This is a simple shell script that integrates [dmenu](https://tools.suckless.org/dmenu/) with [GnuPG](https://gnupg.org/) as an alternative pinentry method.
 
 ## Installation
 
