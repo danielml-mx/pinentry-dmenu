@@ -20,11 +20,11 @@ To use dmenu as the pinentry program for GnuPG, configure `$GNUPGHOME/gpg-agent.
 
 - For a manual installation (default):
 
-        pinentry-program /usr/local/bin/pinentry-dmenu
+      pinentry-program /usr/local/bin/pinentry-dmenu
 
 - For an AUR installation:
 
-        pinentry-program /usr/bin/pinentry-dmenu
+      pinentry-program /usr/bin/pinentry-dmenu
 
 ## Final note
 
