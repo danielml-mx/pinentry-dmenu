@@ -21,5 +21,5 @@ pinentry-program /usr/local/bin/pinentry-dmenu
 
 ## Final note
 
-I very rarely interface with this program nowadays. I use `[pam-gnupg](https://tools.suckless.org/dmenu/)` to pass my login password to the `gpg-agent` and have followed the recommendations provided in the repo so that the passphrase cache expires after a day.
+I very rarely interface with this program nowadays. I use [`pam-gnupg`](https://tools.suckless.org/dmenu/) to pass my login password to the `gpg-agent` and have followed the recommendations provided in the repo so that the passphrase cache expires after a day.
 
