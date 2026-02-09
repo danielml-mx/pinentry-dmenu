@@ -19,9 +19,11 @@ This package has been added to the AUR as [`pinentry-dmenu-centered-git`](https:
 To use dmenu as the pinentry program for GnuPG, configure `$GNUPGHOME/gpg-agent.conf` to use the full path of the `pinentry-dmenu` script. The full path of the script will depend on the `PREFIX` used in `config.mk`.
 
 - For a manual installation (default):
+
     pinentry-program /usr/local/bin/pinentry-dmenu
 
 - For an AUR installation:
+
     pinentry-program /usr/bin/pinentry-dmenu
 
 ## Final note
